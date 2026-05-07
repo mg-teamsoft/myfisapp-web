@@ -216,7 +216,7 @@ function HomePage() {
       <footer className="footer">
         <p>© {new Date().getFullYear()} My Fiş App, All rights reserved.</p>
         <div className="footer-links">
-          <a href="mailto:info@teamsoft.com.tr">Contact Us for Support</a>
+          <a href="mailto:info@guvenai.com">Contact Us for Support</a>
           <a href={`${process.env.PUBLIC_URL}/privacy.html`}>Privacy Policy</a>
         </div>
         
