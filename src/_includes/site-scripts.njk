@@ -1,0 +1,66 @@
+<script>
+  (() => {
+    const launchDate = (() => {
+      const now = new Date();
+      let target = new Date(now.getFullYear(), 11, 1, 0, 0, 0);
+      if (target < now) {
+        target = new Date(now.getFullYear() + 1, 11, 1, 0, 0, 0);
+      }
+      return target;
+    })();
+
+    const setText = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.textContent = value;
+      }
+    };
+
+    const updateCountdown = () => {
+      const diff = Math.max(launchDate.getTime() - Date.now(), 0);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      setText("[data-countdown-days]", String(days).padStart(2, "0"));
+      setText("[data-countdown-hours]", String(hours).padStart(2, "0"));
+      setText("[data-countdown-mins]", String(mins).padStart(2, "0"));
+      setText("[data-countdown-secs]", String(secs).padStart(2, "0"));
+
+      const downloadButton = document.querySelector("[data-download-button]");
+      if (downloadButton) {
+        downloadButton.disabled = diff !== 0;
+      }
+    };
+
+    updateCountdown();
+    window.setInterval(updateCountdown, 1000);
+
+    const notifyToggle = document.querySelector("[data-notify-toggle]");
+    const notifyForm = document.querySelector("[data-notify-form]");
+    const notifySubmit = document.querySelector("[data-notify-submit]");
+    const notifyEmail = document.querySelector("[data-notify-email]");
+    const notifyError = document.querySelector("[data-notify-error]");
+    const notifyArea = document.querySelector("[data-notify-area]");
+    const notifySuccess = document.querySelector("[data-notify-success]");
+
+    notifyToggle?.addEventListener("click", () => {
+      notifyForm.hidden = false;
+      notifyError.hidden = true;
+    });
+
+    notifySubmit?.addEventListener("click", () => {
+      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(notifyEmail.value.trim());
+      if (!isValidEmail) {
+        notifyError.hidden = false;
+        return;
+      }
+
+      notifyArea.hidden = true;
+      notifySuccess.hidden = false;
+    });
+
+    setText("[data-current-year]", new Date().getFullYear());
+  })();
+</script>
