@@ -1,0 +1,144 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyFisApp</title>
+    <link rel="alternate" hreflang="en" href="/en/">
+    <link rel="alternate" hreflang="tr" href="/tr/">
+    <link rel="stylesheet" href="/App.css">
+  </head>
+  <body>
+    <main class="app">
+      <nav class="language-switch container" aria-label="Language">
+        <a href="/en/" aria-current="page">
+          <span aria-hidden="true">🇬🇧</span>
+          EN
+        </a>
+        <a href="/tr/" >
+          <span aria-hidden="true">🇹🇷</span>
+          TR
+        </a>
+      </nav>
+      <section class="hero container">
+  <div class="hero-icon">
+    <img src="/assets/AppIcon.png" alt="My Fiş App Logo">
+  </div>
+  <h1>My Fiş App: Invoicing Made Simple</h1>
+  <p>The simplest way for freelancers and small businesses to create professional invoices, track payments, and manage clients on the go.</p>
+
+  <div class="hero-shot">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcgW2tFAxk4o2sVZDJgmBLi-83rAbqVGlV6tBq_zLEEow2uUmC93AThQZBgPUmaUY_aRbhipeAOhsEzuHmuyi7iBvZNywbWjBp_hHCJiuO1e6TOmz5hTNMUEUSWc6kIMNNGqm-epc_Uztz5vsIEnECwRrJSZfRulR_J8tyQB7WU5Xa4IRzKChL6RLuFlN3iJMtyq4ZucUwubeKvsWKluiJpQhk5YzomFM4HAdLlC01Y5VeIw4z8t1-MGg0libEJ4WOWtrltaz2Q" alt="My Fiş App preview">
+  </div>
+</section>
+
+      <section class="features container">
+  <h2>Everything you need, nothing you don&#39;t.</h2>
+  <p>Our app is packed with powerful features designed to save you time and help you get paid faster.</p>
+
+  <div class="feature-list">
+    
+    <div class="feature-card">
+      <span class="feature-icon" aria-hidden="true">⚡</span>
+      <div>
+        <h3>Create Invoices in Seconds</h3>
+        <p>Generate, scan and send professional invoices in under a minute with our intuitive interface.</p>
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <span class="feature-icon" aria-hidden="true">📈</span>
+      <div>
+        <h3>Track Payments &amp; Clients</h3>
+        <p>Never lose track of a receipt. Easily track what was paid and how much was spent monthly.</p>
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <span class="feature-icon" aria-hidden="true">🧾</span>
+      <div>
+        <h3>Professional Templates</h3>
+        <p>Look professional with beautifully designed, customizable invoice templates.</p>
+      </div>
+    </div>
+    
+    <div class="feature-card">
+      <span class="feature-icon" aria-hidden="true">📱</span>
+      <div>
+        <h3>Manage On-the-Go</h3>
+        <p>Run your business from anywhere. All your data is synced across your devices.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+      <section class="glimpse container">
+  <p class="glimpse-kicker">A GLIMPSE INSIDE</p>
+  <div class="glimpse-grid">
+    
+    <div class="glimpse-card">
+      <img src="/assets/screenshot1.jpg" alt="Dashboard">
+      <div class="glimpse-content">
+        <h4>Dashboard</h4>
+        <p>Your business at a glance</p>
+      </div>
+    </div>
+    
+    <div class="glimpse-card">
+      <img src="/assets/screenshot2.jpg" alt="Create Invoice">
+      <div class="glimpse-content">
+        <h4>Create Invoice</h4>
+        <p>Effortless invoice creation</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+      <section class="cta container">
+  <h2>Ready to Simplify Your Invoicing?</h2>
+  <p>Download the app today and spend less time on paperwork and more time on what you do best.</p>
+  <div class="download-actions">
+    <a class="download-btn download-btn-apple" href="https://apps.apple.com/tr/app/my-fi-%C5%9F-app/id6756621667?uo=4" target="_blank" rel="noopener" aria-label="Download My Fiş App on the App Store">
+      <span class="download-icon" aria-hidden="true"></span>
+      <span class="download-copy">
+        <span class="download-platform">App Store</span>
+        <span class="download-text">Download Now for Free</span>
+      </span>
+    </a>
+    <a class="download-btn download-btn-android is-disabled" aria-disabled="true" role="link" aria-label="Google Play download link will be available soon">
+      <span class="download-icon" aria-hidden="true">▶</span>
+      <span class="download-copy">
+        <span class="download-platform">Google Play</span>
+        <span class="download-text">Download for Free</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span data-current-year></span> My Fiş App, All rights reserved.</p>
+  <div class="footer-links">
+    <a href="mailto:info@guvenai.com">Contact Us for Support</a>
+    <a href="/public/privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+    </main>
+    <script>
+  (() => {
+    const setText = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.textContent = value;
+      }
+    };
+
+    setText("[data-current-year]", new Date().getFullYear());
+  })();
+</script>
+
+  </body>
+</html>

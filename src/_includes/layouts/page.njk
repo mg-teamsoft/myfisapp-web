@@ -1,0 +1,31 @@
+{% set t = site[locale] %}
+<!doctype html>
+<html lang="{{ t.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ t.title }}</title>
+    <link rel="alternate" hreflang="en" href="/en/">
+    <link rel="alternate" hreflang="tr" href="/tr/">
+    <link rel="stylesheet" href="/App.css">
+  </head>
+  <body>
+    <main class="app">
+      <nav class="language-switch container" aria-label="Language">
+        <a href="/en/" {% if locale == "en" %}aria-current="page"{% endif %}>
+          <span aria-hidden="true">🇬🇧</span>
+          EN
+        </a>
+        <a href="/tr/" {% if locale == "tr" %}aria-current="page"{% endif %}>
+          <span aria-hidden="true">🇹🇷</span>
+          TR
+        </a>
+      </nav>
+      {% include "sections/hero.njk" %}
+      {% include "sections/features.njk" %}
+      {% include "sections/screenshots.njk" %}
+      {% include "sections/contact.njk" %}
+    </main>
+    {% include "site-scripts.njk" %}
+  </body>
+</html>
