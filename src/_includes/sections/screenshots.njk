@@ -1,0 +1,14 @@
+<section class="glimpse container">
+  <p class="glimpse-kicker">{{ t.screenshots.kicker }}</p>
+  <div class="glimpse-grid">
+    {% for item in t.screenshots.items %}
+    <div class="glimpse-card">
+      <img src="{{ item.image }}" alt="{{ item.label }}">
+      <div class="glimpse-content">
+        <h4>{{ item.label }}</h4>
+        <p>{{ item.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

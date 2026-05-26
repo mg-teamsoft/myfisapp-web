@@ -1,0 +1,28 @@
+<section class="cta container">
+  <h2>{{ t.contact.title }}</h2>
+  <p>{{ t.contact.description }}</p>
+  <div class="download-actions">
+    <a class="download-btn download-btn-apple" href="{{ t.contact.downloadUrl }}" target="_blank" rel="noopener" aria-label="{{ t.contact.downloadAriaLabel }}">
+      <span class="download-icon" aria-hidden="true"></span>
+      <span class="download-copy">
+        <span class="download-platform">{{ t.contact.downloadPlatform }}</span>
+        <span class="download-text">{{ t.contact.downloadButton }}</span>
+      </span>
+    </a>
+    <a class="download-btn download-btn-android is-disabled" aria-disabled="true" role="link" aria-label="{{ t.contact.androidDownloadAriaLabel }}">
+      <span class="download-icon" aria-hidden="true">▶</span>
+      <span class="download-copy">
+        <span class="download-platform">{{ t.contact.androidDownloadPlatform }}</span>
+        <span class="download-text">{{ t.contact.androidDownloadButton }}</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span data-current-year></span> {{ t.footer.copyright }}</p>
+  <div class="footer-links">
+    <a href="mailto:info@guvenai.com">{{ t.footer.support }}</a>
+    <a href="/public/privacy.html">{{ t.footer.privacy }}</a>
+  </div>
+</footer>

@@ -1,0 +1,12 @@
+<script>
+  (() => {
+    const setText = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.textContent = value;
+      }
+    };
+
+    setText("[data-current-year]", new Date().getFullYear());
+  })();
+</script>
