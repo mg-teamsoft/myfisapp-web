@@ -1,19 +1,14 @@
 <section class="glimpse container">
-  <p class="glimpse-kicker">A GLIMPSE INSIDE</p>
+  <p class="glimpse-kicker">{{ t.screenshots.kicker }}</p>
   <div class="glimpse-grid">
+    {% for item in t.screenshots.items %}
     <div class="glimpse-card">
-      <img src="/assets/screenshot1.jpg" alt="Dashboard">
+      <img src="{{ item.image }}" alt="{{ item.label }}">
       <div class="glimpse-content">
-        <h4>Dashboard</h4>
-        <p>Your business at a glance</p>
+        <h4>{{ item.label }}</h4>
+        <p>{{ item.text }}</p>
       </div>
     </div>
-    <div class="glimpse-card">
-      <img src="/assets/screenshot2.jpg" alt="Create Invoice">
-      <div class="glimpse-content">
-        <h4>Create Invoice</h4>
-        <p>Effortless invoice creation</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>

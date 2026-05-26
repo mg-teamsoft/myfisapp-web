@@ -1,45 +1,11 @@
 <section class="hero container">
   <div class="hero-icon">
-    <img src="/assets/AppIcon.png" alt="My Fiş App Logo">
+    <img src="/assets/AppIcon.png" alt="{{ t.hero.logoAlt }}">
   </div>
-  <h1>My Fiş App: Invoicing Made Simple</h1>
-  <p>
-    The simplest way for freelancers and small businesses to create professional invoices, track
-    payments, and manage clients on the go.
-  </p>
-
-  <div class="countdown" data-countdown>
-    <div class="countdown-box">
-      <span class="countdown-value" data-countdown-days>00</span>
-      <span class="countdown-label">DAYS</span>
-    </div>
-    <div class="countdown-box">
-      <span class="countdown-value" data-countdown-hours>00</span>
-      <span class="countdown-label">HOURS</span>
-    </div>
-    <div class="countdown-box">
-      <span class="countdown-value" data-countdown-mins>00</span>
-      <span class="countdown-label">MINS</span>
-    </div>
-    <div class="countdown-box">
-      <span class="countdown-value" data-countdown-secs>00</span>
-      <span class="countdown-label">SECS</span>
-    </div>
-  </div>
-
-  <div data-notify-area>
-    <button class="notify-btn" type="button" data-notify-toggle>Notify Me</button>
-    <div class="notify-form" data-notify-form hidden>
-      <input type="email" class="notify-input" placeholder="Enter your email" data-notify-email>
-      <button class="send-btn" type="button" data-notify-submit>Send</button>
-      <div class="notify-error" data-notify-error hidden>Please enter a valid email address.</div>
-    </div>
-    <span class="hero-note">Be the first to know when we launch.</span>
-  </div>
-
-  <div class="notify-success" data-notify-success hidden>Your email is added to notify list</div>
+  <h1>{{ t.hero.title }}</h1>
+  <p>{{ t.hero.description }}</p>
 
   <div class="hero-shot">
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcgW2tFAxk4o2sVZDJgmBLi-83rAbqVGlV6tBq_zLEEow2uUmC93AThQZBgPUmaUY_aRbhipeAOhsEzuHmuyi7iBvZNywbWjBp_hHCJiuO1e6TOmz5hTNMUEUSWc6kIMNNGqm-epc_Uztz5vsIEnECwRrJSZfRulR_J8tyQB7WU5Xa4IRzKChL6RLuFlN3iJMtyq4ZucUwubeKvsWKluiJpQhk5YzomFM4HAdLlC01Y5VeIw4z8t1-MGg0libEJ4WOWtrltaz2Q" alt="My Fiş App preview">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcgW2tFAxk4o2sVZDJgmBLi-83rAbqVGlV6tBq_zLEEow2uUmC93AThQZBgPUmaUY_aRbhipeAOhsEzuHmuyi7iBvZNywbWjBp_hHCJiuO1e6TOmz5hTNMUEUSWc6kIMNNGqm-epc_Uztz5vsIEnECwRrJSZfRulR_J8tyQB7WU5Xa4IRzKChL6RLuFlN3iJMtyq4ZucUwubeKvsWKluiJpQhk5YzomFM4HAdLlC01Y5VeIw4z8t1-MGg0libEJ4WOWtrltaz2Q" alt="{{ t.hero.previewAlt }}">
   </div>
 </section>

@@ -1,37 +1,16 @@
 <section class="features container">
-  <h2>Everything you need, nothing you don't.</h2>
-  <p>
-    Our app is packed with powerful features designed to save you time and help you get paid faster.
-  </p>
+  <h2>{{ t.features.title }}</h2>
+  <p>{{ t.features.description }}</p>
 
   <div class="feature-list">
+    {% for feature in t.features.items %}
     <div class="feature-card">
-      <span class="feature-icon" aria-hidden="true">⚡</span>
+      <span class="feature-icon" aria-hidden="true">{{ feature.icon }}</span>
       <div>
-        <h3>Create Invoices in Seconds</h3>
-        <p>Generate, scan and send professional invoices in under a minute with our intuitive interface.</p>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
       </div>
     </div>
-    <div class="feature-card">
-      <span class="feature-icon" aria-hidden="true">📈</span>
-      <div>
-        <h3>Track Payments &amp; Clients</h3>
-        <p>Never lose track of a receipt. Easily track what was paid and how much was spent monthly.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon" aria-hidden="true">🧾</span>
-      <div>
-        <h3>Professional Templates</h3>
-        <p>Look professional with beautifully designed, customizable invoice templates.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon" aria-hidden="true">📱</span>
-      <div>
-        <h3>Manage On-the-Go</h3>
-        <p>Run your business from anywhere. All your data is synced across your devices.</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
