@@ -215,11 +215,18 @@ section {
 }
 
 .download-actions {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
   justify-content: center;
+}
+
+.download-option {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
 .download-btn {
@@ -274,6 +281,21 @@ section {
 .download-text {
   font-size: 1.05rem;
   font-weight: 700;
+}
+
+.download-status {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.download-status-live {
+  color: #15803d;
+}
+
+.download-status-soon {
+  color: #dc2626;
 }
 
 .footer {
